@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/style.css"></head>
 <body>
     <div class="container">
+        <div class="wrapper-to-centre">
         <div class="weather-app">
             <h1>Place name
     </h1>
@@ -18,8 +19,13 @@
     </ul>
     <div class="row">
         <div class="col-md-6">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy">
-        12 C ... F</div>
+            <div class="temperature">
+            <img src="src/sunny.png" alt="Sunny">
+        
+            <strong>12</strong>
+            <span class="units"> <a href="#">°C</a> | <a href="#">°F</a></span>
+        </div>
+        </div>
         <div class="col-md-6">
             <ul>
                 <li>
@@ -34,11 +40,13 @@
             </ul>
         </div>
     </div>
-    <small>
-        <a href="https://github.com/Mushlya/vanilla-weather" target="_blank">Open source</a> code by Olga
-    </small>
+
 </div>
-    <script src="src/app.js"></script>
+<small>
+    <a href="https://github.com/Mushlya/vanilla-weather" target="_blank">Open source</a> code by Olga
+</small>
 </div>
+</div>
+<script src="src/app.js"></script>
 </body>
 </html>
