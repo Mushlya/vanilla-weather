@@ -1,2 +1,25 @@
-h1 {color:green}
-ul {list-style: none}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.weather-app {
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    border: solid salmon;
+    border-radius: 10px;
+}
+h1 {
+    color: #800020;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+    margin-bottom: 0px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+    li {
+    list-style: none; 
+    color: rgb(135,135,135);
+}
