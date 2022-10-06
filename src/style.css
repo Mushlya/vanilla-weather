@@ -20,6 +20,7 @@ ul {
     li {
     list-style: none; 
     color: rgb(135,135,135);
+    text-transform: capitalize;
 }
 .weather-app {
     padding: 20px;
