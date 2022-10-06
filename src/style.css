@@ -20,6 +20,8 @@ ul {
     li {
     list-style: none; 
     color: rgb(135,135,135);
+}
+li:first-letter{
     text-transform: capitalize;
 }
 .weather-app {
