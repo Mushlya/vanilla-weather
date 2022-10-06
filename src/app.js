@@ -18,7 +18,6 @@ return "Last updated: " + day + " " + hour + ":" + minute;
 
 function displayTemperature(response)
 {
-console.log(response.data.main.temp);
 let tempElement=document.querySelector("#apiTemp");
 let cityElement=document.querySelector("#apiCity");
 let conditionsElement=document.querySelector("#apiConditions");
@@ -31,12 +30,6 @@ conditionsElement.innerHTML=response.data.weather[0].description;
 humidityElement.innerHTML=response.data.main.humidity;
 windElement.innerHTML=Math.round(response.data.wind.speed);
 dayTimeElement.innerHTML=formatDayTime(response.data.dt * 1000);
-
-
-
-
-
-
 }
 
 let apiKey = "0cf6b60d58b0c697532c33384fe20a26";
