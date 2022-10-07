@@ -12,6 +12,14 @@
     <div class="container">
         <div class="wrapper-to-centre">
         <div class="weather-app">
+            <form id="searchForm">
+                <div class="row">
+                    <div class="col-9">
+                <input type="search" placeholder="Enter a city name" class="form-control mb-3" id="inputCity" autocomplete="off">
+            </div>
+            <div class="col-3"><input type="submit" value="search" class="btn btn-primary"></div> 
+            </div>
+        </form>
             <h1 id="apiCity">
     </h1>
     <ul>
@@ -21,7 +29,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="temperature">
-            <img id="apiIcon">
+            <img id="apiIcon" width="64" height="64">
             <strong id="apiTemp"></strong>
             <span class="units"> <a href="#">°C</a> | <a href="#">°F</a></span>
         </div>

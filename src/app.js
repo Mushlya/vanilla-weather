@@ -25,6 +25,7 @@ let humidityElement=document.querySelector("#apiHumidity");
 let windElement=document.querySelector("#apiWind");
 let dayTimeElement=document.querySelector("#apiDayTime");
 let iconElement=document.querySelector("#apiIcon");
+
 tempElement.innerHTML=Math.round(response.data.main.temp);
 cityElement.innerHTML=response.data.name;
 conditionsElement.innerHTML=response.data.weather[0].description;
@@ -35,7 +36,21 @@ iconElement.setAttribute("src","http://openweathermap.org/img/wn/" + response.da
 iconElement.setAttribute("alt",response.data.weather[0].description);
 }
 
-let apiKey = "0cf6b60d58b0c697532c33384fe20a26";
-let apiUrl="https://api.openweathermap.org/data/2.5/weather?q=Callantsoog&units=metric&appid="+apiKey;
+function search(city){
 
+let apiKey = "0cf6b60d58b0c697532c33384fe20a26";
+let apiUrl="https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid="+apiKey;
 axios.get(apiUrl).then(displayTemperature); 
+
+}
+
+function handleSubmit(event){
+    event.preventDefault();
+    let inputCityElement=document.querySelector("#inputCity");
+    search(inputCityElement.value);
+}
+
+let formElement= document.querySelector("#searchForm")
+formElement.addEventListener("submit",handleSubmit)
+
+search("Callantsoog");
