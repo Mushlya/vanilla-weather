@@ -24,12 +24,15 @@ let conditionsElement=document.querySelector("#apiConditions");
 let humidityElement=document.querySelector("#apiHumidity");
 let windElement=document.querySelector("#apiWind");
 let dayTimeElement=document.querySelector("#apiDayTime");
+let iconElement=document.querySelector("#apiIcon");
 tempElement.innerHTML=Math.round(response.data.main.temp);
 cityElement.innerHTML=response.data.name;
 conditionsElement.innerHTML=response.data.weather[0].description;
 humidityElement.innerHTML=response.data.main.humidity;
 windElement.innerHTML=Math.round(response.data.wind.speed);
 dayTimeElement.innerHTML=formatDayTime(response.data.dt * 1000);
+iconElement.setAttribute("src","http://openweathermap.org/img/wn/" + response.data.weather[0].icon + "@2x.png");
+iconElement.setAttribute("alt",response.data.weather[0].description);
 }
 
 let apiKey = "0cf6b60d58b0c697532c33384fe20a26";
