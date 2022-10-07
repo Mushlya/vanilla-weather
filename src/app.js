@@ -26,7 +26,9 @@ let windElement=document.querySelector("#apiWind");
 let dayTimeElement=document.querySelector("#apiDayTime");
 let iconElement=document.querySelector("#apiIcon");
 
-tempElement.innerHTML=Math.round(response.data.main.temp);
+celsiusTemp=Math.round(response.data.main.temp);
+tempElement.innerHTML=celsiusTemp;
+
 cityElement.innerHTML=response.data.name;
 conditionsElement.innerHTML=response.data.weather[0].description;
 humidityElement.innerHTML=response.data.main.humidity;
@@ -50,7 +52,34 @@ function handleSubmit(event){
     search(inputCityElement.value);
 }
 
-let formElement= document.querySelector("#searchForm")
-formElement.addEventListener("submit",handleSubmit)
+function showCelsius(event) {
+    event.preventDefault();
+    tempElement.innerHTML=celsiusTemp;
+    cLink.classList.remove("nonActiveLink");
+    cLink.classList.add("activeLink");
+    fLink.classList.remove("activeLink");
+    fLink.classList.add("nonActiveLink");
+}
+
+function showFahrenheit(event) {
+    event.preventDefault();
+    tempElement.innerHTML=Math.round((celsiusTemp * 9) / 5 + 32);
+    fLink.classList.remove("nonActiveLink");
+    fLink.classList.add("activeLink");
+    cLink.classList.remove("activeLink");
+    cLink.classList.add("nonActiveLink");   
+}
+
+let formElement= document.querySelector("#searchForm");
+formElement.addEventListener("submit",handleSubmit);
+
+let fLink=document.querySelector("#fLink");
+fLink.addEventListener("click",showFahrenheit);
+
+let cLink=document.querySelector("#cLink");
+cLink.addEventListener("click",showCelsius);
+
+let tempElement=document.querySelector("#apiTemp");
+let celsiusTemp = null;
 
 search("Callantsoog");
