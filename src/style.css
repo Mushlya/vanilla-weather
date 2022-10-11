@@ -75,3 +75,26 @@ a:link {
     cursor: pointer;
     color: blue;
 }
+
+.weather-forecast
+{
+    margin-top: 20px;
+    text-align: center;
+    color: black
+}
+
+.weather-forecast-day
+{
+    font-size: 16px;
+    opacity: 40%;
+}
+
+.weather-forecast-temp
+{
+    font-size: 13px;
+}
+
+.weather-forecast-temp-low
+{
+    opacity: 40%;
+}
