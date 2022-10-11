@@ -16,6 +16,29 @@ let day=days[date.getDay()];
 return "Last updated: " + day + " " + hour + ":" + minute;
 }
 
+function displayForecast() {
+    let forecastHTML = `<div class="row">`;
+    let days=["Thu","Fri","Sat", "Sun", "Mon"];
+        days.forEach(function(day)
+    {
+        forecastHTML = forecastHTML + `
+        <div class="col-2">
+        <div class="weather-forecast-day">
+        ${day}
+        </div>
+        <img src="http://openweathermap.org/img/wn/03d@2x.png" alt="" class="src" width="48">
+        <div class="weather-forecast-temp">
+            <span class="weather-forecast-temp-high">18</span> 
+            <span class="weather-forecast-temp-low">12</span>
+        </div>
+        </div>
+            `;
+    });
+    
+    let forecastElement=document.querySelector("#forecast");        
+    forecastElement.innerHTML=forecastHTML;
+}
+
 function displayTemperature(response)
 {
 let tempElement=document.querySelector("#apiTemp");
@@ -82,4 +105,7 @@ cLink.addEventListener("click",showCelsius);
 let tempElement=document.querySelector("#apiTemp");
 let celsiusTemp = null;
 
+displayForecast();
+
 search("Callantsoog");
+
