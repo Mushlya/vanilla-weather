@@ -35,7 +35,6 @@ function displayForecast(response) {
 
     
     let forecastHTML = `<div class="row">`;
-    let days=["Thu","Fri","Sat", "Sun", "Mon"];
         forecast.forEach(function(forecastDay, index)
     {
         if (index < 6)
@@ -47,8 +46,8 @@ function displayForecast(response) {
         </div>
         <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" class="src" width="48">
         <div class="weather-forecast-temp">
-            <span class="weather-forecast-temp-high">${Math.round(forecastDay.temp.max)}</span> 
-            <span class="weather-forecast-temp-low">${Math.round(forecastDay.temp.min)}</span>
+            <span class="weather-forecast-temp-high">${Math.round(forecastDay.temp.max)}°</span> 
+            <span class="weather-forecast-temp-low">${Math.round(forecastDay.temp.min)}°</span>
         </div>
         </div>
             `;
@@ -97,32 +96,8 @@ function handleSubmit(event){
     search(inputCityElement.value);
 }
 
-function showCelsius(event) {
-    event.preventDefault();
-    tempElement.innerHTML=celsiusTemp;
-    cLink.classList.remove("nonActiveLink");
-    cLink.classList.add("activeLink");
-    fLink.classList.remove("activeLink");
-    fLink.classList.add("nonActiveLink");
-}
-
-function showFahrenheit(event) {
-    event.preventDefault();
-    tempElement.innerHTML=Math.round((celsiusTemp * 9) / 5 + 32);
-    fLink.classList.remove("nonActiveLink");
-    fLink.classList.add("activeLink");
-    cLink.classList.remove("activeLink");
-    cLink.classList.add("nonActiveLink");   
-}
-
 let formElement= document.querySelector("#searchForm");
 formElement.addEventListener("submit",handleSubmit);
-
-let fLink=document.querySelector("#fLink");
-fLink.addEventListener("click",showFahrenheit);
-
-let cLink=document.querySelector("#cLink");
-cLink.addEventListener("click",showCelsius);
 
 let tempElement=document.querySelector("#apiTemp");
 let celsiusTemp = null;

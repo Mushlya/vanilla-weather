@@ -44,36 +44,7 @@ li:first-letter{
 }
 
 .temperature .units {
-    position: relative;
-    top: -8px;
-    font-size: small;
-    left: 6px;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-.activeLink
-{
-    color: white;
-    background-color:blue;
-}
-
-.activeLink:hover {
-    color: white;
-    cursor: default;
-}
-
-#nonActiveLink
-{
-    color: blue;
-    background-color:transparent;
-}
-
-#nonActiveLink:hover {
-    cursor: pointer;
-    color: blue;
+    font-size: 24px;
 }
 
 .weather-forecast
@@ -85,13 +56,13 @@ a:link {
 
 .weather-forecast-day
 {
-    font-size: 16px;
+    font-size: 13px;
     opacity: 40%;
 }
 
 .weather-forecast-temp
 {
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .weather-forecast-temp-low
