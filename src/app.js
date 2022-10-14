@@ -18,13 +18,13 @@ return "Last updated: " + day + " " + hour + ":" + minute;
 
 function getForecast(coordinates)
 {
-    let apiKey = "0cf6b60d58b0c697532c33384fe20a26";
-    let apiUrl="https://api.openweathermap.org/data/2.5/forecast?lat="+coordinates.lat+"&lon="+coordinates.lon+"&units=metric&appid="+apiKey;
-    console.log(apiUrl);
+    let apiKey = "96771e971243152d6b8948878c26adde";
+    let apiUrl="https://api.openweathermap.org/data/2.5/onecall?lat="+coordinates.lat+"&lon="+coordinates.lon+"&units=metric&appid="+apiKey;
     axios.get(apiUrl).then(displayForecast);
 }
 
-function displayForecast() {
+function displayForecast(response) {
+    console.log(response.data.daily);
     let forecastHTML = `<div class="row">`;
     let days=["Thu","Fri","Sat", "Sun", "Mon"];
         days.forEach(function(day)
@@ -49,7 +49,6 @@ function displayForecast() {
 
 function displayTemperature(response)
 {
-    console.log(response.data);
 let tempElement=document.querySelector("#apiTemp");
 let cityElement=document.querySelector("#apiCity");
 let conditionsElement=document.querySelector("#apiConditions");
