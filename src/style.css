@@ -1,11 +1,11 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #F9F7FE;
 }
 .wrapper-to-centre {
-    max-width: 400px;
+    max-width: 580px;
     margin: 30px auto;
 }
-
 
 h1 {
     color: orangered;
@@ -25,9 +25,10 @@ li:first-letter{
     text-transform: capitalize;
 }
 .weather-app {
-    padding: 20px;
-    border: solid salmon;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius:20px;
+    border: solid #f4f2fa;
+    background-color: white;
 }
 
 .temperature img {
@@ -36,15 +37,15 @@ li:first-letter{
 }
 
 .temperature strong {
-    color: blue;
+    color: #006DCB;
     font-size: 36px;
     position: relative;
     top: 8px;
-    
 }
 
 .temperature .units {
     font-size: 24px;
+    color: #006DCB;
 }
 
 .weather-forecast
@@ -68,4 +69,13 @@ li:first-letter{
 .weather-forecast-temp-low
 {
     opacity: 40%;
+}
+
+.form-control {
+    background-color: #F9F7FE;
+    width: 360px;
+}
+
+.btn {
+    width: 110px;
 }

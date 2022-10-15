@@ -13,7 +13,7 @@ if (minute < 10)
 }
 let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 let day=days[date.getDay()];
-return "Last updated: " + day + " " + hour + ":" + minute;
+return day + " " + hour + ":" + minute;
 }
 
 function formatDay(timestamp){

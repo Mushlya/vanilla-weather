@@ -15,44 +15,35 @@
             <form id="searchForm">
                 <div class="row">
                     <div class="col-9">
-                <input type="search" placeholder="Enter a city name" class="form-control mb-3" id="inputCity" autocomplete="off">
-            </div>
-            <div class="col-3"><input type="submit" value="search" class="btn btn-primary"></div> 
-            </div>
+                        <input type="search" placeholder="Enter a city name" class="form-control mb-3" id="inputCity" autocomplete="off">
+                    </div>
+                <div class="col-3"><input type="submit" value="search" class="btn btn-primary"></div> 
+        </div>
         </form>
             <h1 id="apiCity">
     </h1>
     <ul>
-        <li id="apiDayTime"></li>
-        <li id="apiConditions"></li>
+        <li> <span id="apiDayTime"></span>, <span id="apiConditions"></span></li>
+        <li> Humidity: <span id="apiHumidity"></span>%, Wind: <span id="apiWind"></span> km/h</li>
     </ul>
     <div class="row">
         <div class="col-md-6">
             <div class="temperature">
-            <img id="apiIcon" width="64" height="64">
+            <img id="apiIcon" width="48" height="48">
             <strong id="apiTemp"></strong>
             <span class="units">°C</span>
         </div>
         </div>
-        <div class="col-md-6 my-auto">
-            <ul>
-                <li>
-                    Humidity: <span id="apiHumidity"></span>%
-                </li>
-                <li>
-                    Wind: <span id="apiWind"></span> km/h
-                </li>
-            </ul>
+        <div class="weather-forecast" id="forecast"></div></div>
+        <div class="row">
+            <small>
+                <hr>
+                <small>This project was coded by <a href="https://www.linkedin.com/in/olgacunnane/" target="_blank">Olga Cunnane</a>, is open sourced on <a href="https://github.com/Mushlya/vanilla-weather" target="_blank">GitHub</a> and hosted on <a href="https://main--grand-strudel-0332fd.netlify.app/" target="_blank">Netlify</a>
+            </small></small>
         </div>
-        <div class="weather-forecast" id="forecast">
-        </div>
-    </div>
 </div>
-<small>
-    <a href="https://github.com/Mushlya/vanilla-weather" target="_blank">Open source</a> code by Olga
-</small>
+
 </div>
 </div>
 <script src="src/app.js"></script>
 </body>
-</html>
